@@ -82,7 +82,7 @@
         <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div class="max-w-4xl">
                 <div class="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-6 animate-fade-in-1">
-                    <span class="text-cyan-400 text-sm font-semibold">Advancing Public Safety Technology</span>
+                    <span class="text-cyan-400 text-sm font-semibold">Building Sovereign AI for Public Safety</span>
                 </div>
                 <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-2">
                     AI-Powered Evidence Management for Modern Law Enforcement
@@ -132,7 +132,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold mb-4">Core Technology</h2>
                 <p class="text-xl text-slate-300 max-w-3xl mx-auto">
-                    Built on advanced AI and computer vision, our platform addresses the most pressing challenges in law enforcement data management.
+                    Building proprietary AI models from the ground up—independent of commercial APIs. Our platform addresses the most pressing challenges in law enforcement data management with complete data sovereignty.
                 </p>
             </div>
 
@@ -297,7 +297,7 @@
                         We envision a future where law enforcement agencies can focus entirely on public safety—not paperwork. Where every piece of evidence is instantly accessible, every case connection is automatically identified, and officers have real-time intelligence at their fingertips.
                     </p>
                     <p class="text-xl text-slate-300 mb-8 leading-relaxed">
-                        We're building the foundational AI infrastructure that will power the next generation of public safety technology.
+                        We're building the foundational AI infrastructure that will power the next generation of public safety technology—developed in-house, independent of commercial AI providers, ensuring complete data sovereignty and control.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-start gap-4">
@@ -306,7 +306,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-lg mb-1">Sovereign AI Development</h4>
-                                <p class="text-slate-400">Purpose-built AI models trained specifically for public safety applications, ensuring accuracy and reliability.</p>
+                                <p class="text-slate-400">Building proprietary AI models from the ground up—no dependency on third-party APIs or commercial LLMs. Complete control over training data, model architecture, and deployment.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
@@ -391,7 +391,12 @@
                 </div>
             </div>
 
-            <form id="contact-form" action="https://formspree.io/f/info@bluelineai.com" method="POST" class="max-w-md mx-auto space-y-4">
+            <form id="contact-form" action="https://formsubmit.co/info@bluelineai.com" method="POST" class="max-w-md mx-auto space-y-4">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Partnership Inquiry - Blueline AI">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
                 <input 
                     type="text" 
                     name="name"
@@ -401,7 +406,7 @@
                 />
                 <input 
                     type="email" 
-                    name="_replyto"
+                    name="email"
                     placeholder="Email Address" 
                     required
                     class="w-full px-6 py-4 bg-slate-900 border border-slate-800 rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-white"
@@ -419,11 +424,9 @@
                     required
                     class="w-full px-6 py-4 bg-slate-900 border border-slate-800 rounded-lg focus:outline-none focus:border-cyan-500 transition-colors resize-none text-white"
                 ></textarea>
-                <input type="hidden" name="_subject" value="New Partnership Inquiry - Blueline AI">
                 <button type="submit" class="w-full px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 rounded-lg font-bold text-lg transition-all hover:scale-105">
                     Send Message
                 </button>
-                <p id="form-status" class="text-center text-sm mt-4"></p>
             </form>
 
             <div class="mt-12 pt-8 border-t border-slate-800">
@@ -485,49 +488,14 @@
             }
         });
 
-        // Contact form handler with Formspree
+        // Contact form handler
         const contactForm = document.getElementById('contact-form');
-        const formStatus = document.getElementById('form-status');
-        
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
+        contactForm.addEventListener('submit', (e) => {
+            // Show sending state
             const submitButton = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
-            formStatus.textContent = '';
-            
-            try {
-                const formData = new FormData(contactForm);
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    formStatus.textContent = '✓ Thank you! Your message has been sent. We\'ll get back to you soon.';
-                    formStatus.className = 'text-center text-sm mt-4 text-cyan-400';
-                    contactForm.reset();
-                } else {
-                    const data = await response.json();
-                    if (data.errors) {
-                        formStatus.textContent = 'Oops! There was a problem: ' + data.errors.map(error => error.message).join(', ');
-                    } else {
-                        formStatus.textContent = 'Oops! There was a problem sending your message. Please try emailing us directly at info@bluelineai.com';
-                    }
-                    formStatus.className = 'text-center text-sm mt-4 text-red-400';
-                }
-            } catch (error) {
-                formStatus.textContent = 'Oops! There was a problem. Please email us directly at info@bluelineai.com';
-                formStatus.className = 'text-center text-sm mt-4 text-red-400';
-            }
-            
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
+            // Form will submit normally and FormSubmit will handle the email
         });
     </script>
 </body>
