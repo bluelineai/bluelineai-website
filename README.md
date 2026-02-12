@@ -1,98 +1,166 @@
 # Blueline AI Website
 
-Modern, investor-focused website for Blueline AI with your custom logo and working contact form.
+Modern, investor-focused website for Blueline AI emphasizing sovereign AI development and data independence.
+
+## 🎯 Key Messaging
+
+This website emphasises:
+- **Sovereign AI**: Building proprietary models, not dependent on OpenAI, Anthropic, or other commercial LLMs
+- **Data Independence**: Complete control over training data and model deployment
+- **Evidence Management & EnforceEye**: Core product focus for law enforcement
+- **Pre-Seed Stage**: Honest about current development phase (concept/design/research)
+- **Fundraising**: Clear "Raising Seed Round" messaging for investors
+
+**Language**: All content uses British English spelling and terminology.
+
+## 📊 Current Status Reflected on Site
+
+- **Stats**: Shown as "Target:", "Goal:", "Vision:" (aspirational, not achieved)
+- **Progress**: 10-20% (realistic early-stage development)
+- **Stage**: "Concept Phase", "Design Phase", "Research Phase"
+- **Funding**: "Currently Raising Seed Round" badge clearly displayed
 
 ## Quick Start
 
-This folder contains everything you need to deploy your new website:
+This folder contains everything you need:
 - `index.html` - Your complete website
 - `icon.png` - Your Blueline AI logo
 - `README.md` - This file
 
-## ✅ What's Already Configured
+## ✅ Already Configured For GitHub Pages
 
-✓ Your logo is integrated throughout the site (navbar, footer)
-✓ Contact form sends emails to **info@bluelineai.com**
-✓ Responsive design (works on mobile, tablet, desktop)
-✓ Professional dark theme optimized for investor audience
-✓ All content focused on Evidence Management and EnforceEye
+✓ Single HTML file (no build process needed)
+✓ All assets embedded or from CDN
+✓ Contact form using FormSubmit (free, no API keys)
+✓ Optimized for fast loading
+✓ Mobile responsive
 
 ## 📧 Contact Form - How It Works
 
-The contact form is **already set up** to send emails to info@bluelineai.com using Formspree.
+The contact form uses **FormSubmit** and is **fully configured** to send emails to info@bluelineai.com.
+
+### ✅ Form Configuration Verified
+
+The form is set up with:
+- **Action**: `https://formsubmit.co/info@bluelineai.com`
+- **Method**: POST
+- **Email Subject**: "New Partnership Inquiry - Blueline AI"
+- **Format**: Table layout for easy reading
+- **Captcha**: Disabled for better user experience
 
 ### IMPORTANT: First-Time Activation
 
-**The first time someone submits the form**, Formspree will send a confirmation email to info@bluelineai.com. 
+**The very first time someone submits the form**, FormSubmit will send a confirmation email to info@bluelineai.com with a link to activate.
 
-**You MUST click the confirmation link** in that email to activate the form.
+**Steps:**
+1. Someone fills out the form and clicks "Send Message"
+2. Check info@bluelineai.com inbox (and spam folder)
+3. You'll see an email from FormSubmit with subject "Please Confirm Form"
+4. **Click the confirmation link** in that email
+5. Done! All future submissions will arrive automatically
 
-After that, all form submissions will automatically arrive in your inbox!
+### What Happens After Activation
 
-### What You'll Receive
+Once confirmed:
+- Form submissions go straight to info@bluelineai.com
+- You get an email with all the details:
+  - Name
+  - Email address
+  - Organisation
+  - Message
+- You can reply directly to respond to inquiries
+- No dashboard, no login needed - just emails in your inbox
 
-When someone fills out your contact form, you'll get an email with:
-- Their name
-- Their email address
-- Their organization
-- Their message
+### How to Test
 
-You can reply directly to respond to inquiries.
+1. Go to your website (bluelineai.com)
+2. Scroll to the contact form
+3. Fill it out with test data
+4. Click "Send Message"
+5. Check info@bluelineai.com (including spam folder)
+6. Click the confirmation link (first time only)
+7. Test again - should work instantly!
 
-### Optional: Formspree Dashboard
+**Expected Email Content:**
+```
+From: FormSubmit <noreply@formsubmit.co>
+Subject: New Partnership Inquiry - Blueline AI
 
-If you want to view all submissions in a dashboard:
+Name: [Person's name]
+Email: [Their email]
+Organisation: [Their org]
+Message: [Their message]
+```
 
-1. Sign up at [formspree.io](https://formspree.io) using info@bluelineai.com
-2. All submissions will appear in your dashboard
-3. Free tier: 50 submissions/month
+## 🔄 How to Update Your Site (GitHub Pages)
 
-**The form works either way** - with or without a Formspree account!
+Since your site is hosted on GitHub Pages, here's how to make updates:
 
-## 🚀 Deployment Instructions
+### Method 1: Edit Directly on GitHub (Quickest)
 
-### Option 1: Netlify (Recommended - Easiest)
+1. **Go to your GitHub repository**
+2. **Click on index.html**
+3. **Click the pencil icon** (✏️ Edit)
+4. **Make your changes** in the editor
+5. **Scroll down** and click **"Commit changes"**
+6. **Wait 1-2 minutes** - changes appear on your live site
 
-1. Go to [netlify.com](https://netlify.com) and sign up (free)
-2. Click "Add new site" → "Deploy manually"
-3. **Drag this entire folder** into the upload area
-4. Your site will be live at `your-site.netlify.app`
-5. Go to "Domain management" to connect `bluelineai.com`
+### Method 2: Upload New File
 
-**That's it!** Your site is live.
+1. **Edit index.html** on your computer
+2. **Go to GitHub** → Your repository
+3. **Click on index.html** → **Delete file** (trash icon)
+4. **Commit the deletion**
+5. **Click "Add file"** → **"Upload files"**
+6. **Upload your edited index.html**
+7. **Commit changes**
 
-### Option 2: Vercel
+### What Triggers Updates
 
-1. Go to [vercel.com](https://vercel.com) and sign up (free)
-2. Click "New Project"
-3. Upload this folder
-4. Follow their guide to connect your custom domain
+- Any commit to your repository automatically rebuilds your site
+- Changes typically appear within 1-2 minutes
+- Check the "Actions" tab to see build status
 
-### Option 3: GitHub Pages
+## 🚀 Deployment (Already Done!)
 
-1. Create a new GitHub repository
-2. Upload these files
-3. Go to Settings → Pages
-4. Enable GitHub Pages
-5. Configure custom domain
+Your site is hosted on GitHub Pages at:
+- `https://yourusername.github.io/bluelineai-website/`
+- Plus custom domain: `bluelineai.com` (if configured)
 
 ## 🎨 Customization Guide
 
-All content is in the `index.html` file. Here's how to update common elements:
+All content is in `index.html`. Here's what you can easily update:
+
+### Key Messaging
+
+**Sovereign AI Emphasis:**
+- Line 81: "Building Sovereign AI for Public Safety" (hero badge)
+- Line 154: Technology intro emphasizing independence from commercial APIs
+- Line 308-309: Sovereign AI Development section - highlights no dependency on third-party models
+
+**To strengthen this message further**, search for "AI" in the file and add references to:
+- "Proprietary models"
+- "Independent of OpenAI/Anthropic"
+- "In-house development"
+- "Data sovereignty"
 
 ### Update Company Stats
 
-Search for these values in index.html:
-- `95%` - Reduction in Report Time
-- `10x` - Faster Case Linking  
-- `24/7` - Automated Processing
+Search for these values:
+- `Target: 95%` - Aspirational reduction in report time
+- `Goal: 10x` - Target for faster case linking  
+- `Vision: 24/7` - Ultimate goal for automation
 
-### Update Progress Bars
+**Important**: These are shown as targets/goals, not achievements, since you're pre-seed.
 
-In the "Vision" section, search for:
-- `width: 65%` - Evidence Management Platform progress
-- `width: 45%` - EnforceEye Smart Camera progress
-- `width: 75%` - AI Model Training progress
+### Update Development Progress
+
+In the "Vision" section, find:
+- `width: 15%` - Evidence Management Platform (concept phase)
+- `width: 10%` - EnforceEye Smart Camera (design phase)
+- `width: 20%` - AI Model Architecture (research phase)
+
+Adjust these percentages as you make real progress.
 
 ### Update Social Links
 
@@ -120,37 +188,74 @@ bluelineai-website/
 
 ## 🔧 Technical Details
 
+- **Hosting**: GitHub Pages (free, unlimited bandwidth for reasonable use)
 - **Size**: ~100KB total (ultra-fast loading)
-- **Framework**: Pure HTML/CSS/JavaScript
+- **Framework**: Pure HTML/CSS/JavaScript (no build required)
 - **Styling**: Tailwind CSS (loaded from CDN)
-- **Icons**: Heroicons SVG
-- **Font**: Manrope (Google Fonts)
-- **Dependencies**: None (all loaded from CDN)
+- **Icons**: Heroicons SVG (inline)
+- **Font**: Manrope (Google Fonts CDN)
+- **Form**: FormSubmit (free email service)
 
-## 🎯 Features
+### GitHub Pages Specifics
 
-- Smooth scroll navigation
-- Mobile-responsive menu
-- Animated hero section
-- Hover effects on cards
-- Progress indicators
-- Working contact form
-- Professional typography
-- Fast loading speed
+✅ **No deployment needed** - Changes go live automatically
+✅ **HTTPS by default** - Free SSL certificate  
+✅ **Custom domain support** - Can use bluelineai.com
+✅ **Fast CDN** - Served globally by GitHub
+✅ **99.9% uptime** - Reliable Microsoft infrastructure
 
-## ⚡ Performance
+### Performance Optimizations for GitHub Pages
 
-- No build process required
-- Loads in under 1 second
-- Optimized for Core Web Vitals
-- Works on all modern browsers
+- Single HTML file = instant page load
+- No JavaScript frameworks = no bundle size
+- CDN resources = parallel loading
+- Minimal CSS = fast paint times
+- Lazy loading not needed = simple codebase
+
+## 💼 Investor-Ready Features
+
+This website is designed to attract Series A investors by emphasizing:
+
+### 1. **Sovereign AI Differentiation**
+- Clear messaging: "Building proprietary AI models from the ground up"
+- Emphasizes independence from OpenAI, Anthropic, Google
+- Highlights data sovereignty and control
+- Positions as deep-tech infrastructure play
+
+### 2. **Market Positioning**
+- Focus: Law enforcement (defined market)
+- Products: Evidence Management + EnforceEye (specific solutions)
+- Stage: R&D/Prototype (honest about current state)
+- Vision: Foundational AI infrastructure
+
+### 3. **Credibility Signals**
+- Professional dark theme (tech-forward, serious)
+- Progress indicators (shows momentum)
+- Specific capabilities (not vague promises)
+- Technical depth (sovereign AI, edge computing)
+
+### 4. **Clear Call-to-Action**
+- Three partnership types: Investors, Agency Partners, Tech Partners
+- Simple contact form
+- Direct email visible
+- Low-friction engagement
+
+## 🎯 Key Differentiators to Emphasize
+
+When talking to investors, highlight:
+
+1. **"We're building our own models"** - Not reselling OpenAI/Anthropic
+2. **"Data never leaves the agency"** - Critical for gov contracts
+3. **"Purpose-built for law enforcement"** - Not general-purpose AI
+4. **"Complete stack control"** - From data collection (camera) to analysis (AI) to storage (evidence hub)
 
 ## 📞 Need Help?
 
-### Formspree Issues
-- Check spam folder for confirmation email
-- Verify email is sent to info@bluelineai.com
-- Visit formspree.io/support for help
+### Form Issues
+- **Not receiving emails?** Check spam/junk folder
+- **Still waiting for confirmation?** First submission requires clicking link in confirmation email
+- **Form not working?** Make sure you're connected to internet and try again
+- Visit formsubmit.co/help for support
 
 ### Deployment Issues
 - Netlify: https://docs.netlify.com
